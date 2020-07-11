@@ -20,6 +20,7 @@ import { from } from 'rxjs';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,8 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
     CategoriesComponent,
     NotFoundComponent,
     NavSidComponent,
-    ForgotPasswordComponent,
+    ForgotPasswordComponent
+    
     
   ],
   imports: [

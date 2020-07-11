@@ -5,8 +5,8 @@ import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { AccountComponent } from './components/account/account.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
-
 
 
 const routes: Routes = [
@@ -24,14 +24,16 @@ const routes: Routes = [
     path:'categories',
     component:CategoriesComponent
   },
+ 
   {
-    path:'**',
-    component:NotFoundComponent
+   path:'forgetpassword',
+  component:ForgotPasswordComponent
   },
   {
-    path:'forgotPassword',
-    component:ForgotPasswordComponent
-  }
+    path:'account',
+    component:AccountComponent
+  },
+  
   
 ];
 
