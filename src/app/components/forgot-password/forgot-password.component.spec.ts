@@ -6,6 +6,8 @@ describe('ForgotPasswordComponent', () => {
   let component: ForgotPasswordComponent;
   let fixture: ComponentFixture<ForgotPasswordComponent>;
  
+
+  
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ ForgotPasswordComponent ]
