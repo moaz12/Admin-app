@@ -15,6 +15,7 @@ export class SignUpComponent implements OnInit {
   ngOnInit(): void {
   }
   signup(form)
+  
   {
     let data:User = form.value
     this.as.signUp(data.email,data.password)
