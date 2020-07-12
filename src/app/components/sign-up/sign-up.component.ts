@@ -24,11 +24,10 @@ errorMessage:string;
     .then(result => {
       this.errorMessage=''
       this.us.AddNewUser(result.user.uid,data.name,data.adress)
-      //.then(() => {
-        //this.router.navigate(['/'])
-      //}) 
-    })
-     
+      })
+      .then(() => {
+        this.router.navigate(['/'])
+      }) 
     .catch(err => 
       this.errorMessage = err.message
       )

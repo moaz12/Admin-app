@@ -14,7 +14,10 @@ export class AuthService {
     return this.fireAuth.createUserWithEmailAndPassword(email,password);
   }
 
-  login(){}
+  login(email,password)
+  {
+    return this.fireAuth.signInWithEmailAndPassword(email,password);
+  }
 
   logOut(){}
 }
