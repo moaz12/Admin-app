@@ -12,9 +12,9 @@
               <form #f="ngForm" (ngSubmit)="signup(f)" class="user">
                 <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input ngModel #firstname="ngModel" name="firstname" required  type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="First Name">
+                    <input ngModel #name="ngModel" name="firstname" required  type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="First Name">
                   </div>
-                  <div *ngIf="firstname.invalid && firstname.touched" class="alert alert-danger">
+                  <div *ngIf="name.invalid && name.touched" class="alert alert-danger">
                     first name is required
                   </div>
                   <div class="col-sm-6">
@@ -27,8 +27,14 @@
                 <div class="form-group">
                   <input ngModel #email="ngModel" required  email name="email"  type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email Address">
                 </div>
-                <div *ngIf="email.invalid && email.touched" class="alert alert-danger">
-                  first name is required
+                <div *ngIf="email.invalid && address.touched" class="alert alert-danger">
+                  email is required
+                </div> 
+                <div class="form-group">
+                  <input ngModel #address="ngModel" required   name="adress"  type="text" class="form-control form-control-user" id="exampleInputpAdress" placeholder="your Address">
+                </div>
+                <div *ngIf="address.invalid && password.touched" class="alert alert-danger">
+                  your adress is required
                 </div> 
                 <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
@@ -48,9 +54,11 @@
                   </div>
                 </div>
                 <button  [disabled]="f.invalid || repeatpassword.value !== password.value" 
-                [routerLink]="['/login']" href="#" class="btn btn-primary btn-user btn-block">
+                 href="#" class="btn btn-primary btn-user btn-block">
                   Register Account
                 </button>
+                  <br/>
+                <div class="alert alert-danger" *ngIf ="errorMessage">{{errorMessage}}</div>
                 <hr>
                 <a href="index.html" class="btn btn-google btn-user btn-block">
                   <i class="fab fa-google fa-fw"></i> Register with Google

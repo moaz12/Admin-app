@@ -41,15 +41,16 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
     AppRoutingModule,
     FormsModule,
     AngularFireAuthModule,
-    AngularFireModule.initializeApp({apiKey: "AIzaSyAKqF47x9qjVgJUX1AEW7aeYzEEz5W5g6g",
-    authDomain: "market-38586.firebaseapp.com",
-    databaseURL: "https://market-38586.firebaseio.com",
-    projectId: "market-38586",
-    storageBucket: "market-38586.appspot.com",
-    messagingSenderId: "404568949849",
-    appId: "1:404568949849:web:29e100c8039b24d74c9d48",
-    measurementId: "G-9MC8SWZ1Y6"
-  }),
+    AngularFireModule.initializeApp( {
+      apiKey: "AIzaSyAKqF47x9qjVgJUX1AEW7aeYzEEz5W5g6g",
+      authDomain: "market-38586.firebaseapp.com",
+      databaseURL: "https://market-38586.firebaseio.com",
+      projectId: "market-38586",
+      storageBucket: "market-38586.appspot.com",
+      messagingSenderId: "404568949849",
+      appId: "1:404568949849:web:29e100c8039b24d74c9d48",
+      measurementId: "G-9MC8SWZ1Y6"
+    }),
     AngularFirestoreModule,
     
   ],

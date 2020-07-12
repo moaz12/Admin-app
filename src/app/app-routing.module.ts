@@ -12,12 +12,13 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 const routes: Routes = [
   {
     path:'',
+    component:LoginComponent
+  },
+  {
+    path:'admin',
     component:HomeComponent
   },
   {
-    path:'login',
-    component:LoginComponent
-  },{
     path:'signup',
     component:SignUpComponent
   },{
