@@ -9,7 +9,7 @@ export class UserService {
   constructor(private fs:AngularFirestore) { }
   AddNewUser( id,name,adress)
   {
-    
+     
     this.fs.doc('user/' +id  )
     .set({name,adress});
   }
