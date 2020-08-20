@@ -7,6 +7,8 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { AccountComponent } from './components/account/account.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import{OrderListComponent} from './components/order-list/order-list.component' 
+import { from } from 'rxjs';
 
 
 const routes: Routes = [
@@ -33,6 +35,10 @@ const routes: Routes = [
   {
     path:'account',
     component:AccountComponent
+  },
+  {
+    path:'list',
+    component:OrderListComponent
   },
   
   

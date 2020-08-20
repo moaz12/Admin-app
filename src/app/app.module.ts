@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
+import {ReactiveFormsModule} from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 
+import {environment} from 'src/environments/environment'
 import {AngularFireModule} from '@angular/fire';
 import{AngularFirestoreModule} from '@angular/fire/firestore';
 import{AngularFireAuthModule} from '@angular/fire/auth';
@@ -18,6 +20,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { NavSidComponent } from './components/nav-sid/nav-sid.component';
 import { from } from 'rxjs';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { OrderListComponent } from './components/order-list/order-list.component';
 
 
 
@@ -31,7 +34,8 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
     CategoriesComponent,
     NotFoundComponent,
     NavSidComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    OrderListComponent
     
     
   ],
@@ -39,17 +43,9 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     AngularFireAuthModule,
-    AngularFireModule.initializeApp( {
-      apiKey: "AIzaSyAKqF47x9qjVgJUX1AEW7aeYzEEz5W5g6g",
-      authDomain: "market-38586.firebaseapp.com",
-      databaseURL: "https://market-38586.firebaseio.com",
-      projectId: "market-38586",
-      storageBucket: "market-38586.appspot.com",
-      messagingSenderId: "404568949849",
-      appId: "1:404568949849:web:29e100c8039b24d74c9d48",
-      measurementId: "G-9MC8SWZ1Y6"
-    }),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     
   ],
